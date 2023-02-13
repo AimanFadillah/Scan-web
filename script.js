@@ -15,6 +15,8 @@ input1.addEventListener("input",function () {
 
 tombol.addEventListener("click",function (){
     tombol.style.display = "none";
+    input1.style.display = "none";
+    hasil.innerHTML = "Tunggu Sebentar";
     function displayLoading() {
         hasil.innerHTML = "Loading...";
     }
@@ -22,24 +24,30 @@ tombol.addEventListener("click",function (){
     clearInterval(intervalId)
     let random =  Math.floor(Math.random() * 100) + 1 ;
     if(random >= 80 ){
-        hasil.innerHTML =  random + "% Siap Jadi Predator pantad";
+        hasil.innerHTML =  random + "% " + input1.value + " Siap Jadi Predator pantad";
         tombol.style.display = "inline";
+        input1.style.display = "inline";
     }else if(random >= 70 ){
-        hasil.innerHTML =  random + "% Mulai Merasukimu";
+        hasil.innerHTML =  random + "% " + input1.value + " Mulai terpengaruh";
         tombol.style.display = "inline";
+        input1.style.display = "inline";
     }else if(random >= 50 ){
-        hasil.innerHTML =  random + "% Terancam";
+        hasil.innerHTML =  random + "% " + input1.value + " terancam";
         tombol.style.display = "inline";
+        input1.style.display = "inline";
     }
     else if(random >= 30 ){
-        hasil.innerHTML =  random + "% Sedikit Terinfeksi";
+        hasil.innerHTML =  random + "% " + input1.value +  " Masih geli geli";
         tombol.style.display = "inline";
+        input1.style.display = "inline";
     }else if(random >= 0 ){
-        hasil.innerHTML =  random + "% Aman Cuy";
+        hasil.innerHTML =  random + "% " + input1.value + " Tidak Mempan";
         tombol.style.display = "inline";
+        input1.style.display = "inline";
     }else{
         hasil.innerHTML =  random + "%";
         tombol.style.display = "inline";
+        input1.style.display = "inline";
     }
     },3000);
    
